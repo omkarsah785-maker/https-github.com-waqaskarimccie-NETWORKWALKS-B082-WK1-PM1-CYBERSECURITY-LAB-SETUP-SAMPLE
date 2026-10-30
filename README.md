@@ -1,31 +1,32 @@
 # Cybersecurity Lab Setup
 
-A virtualized cybersecurity laboratory environment designed for hands-on network testing, packet analysis, and security experimentation using isolated virtual machine architecture.
+This repository contains the architecture, setup instructions, and configuration details for a virtualized network environment designed for ethical hacking, penetration testing, and security analysis.
 
 ---
 
-## Executive Summary
+## 🛠️ Environment Overview
 
-* **Project Purpose:** Established a secure, isolated sandbox environment to practice network scanning, traffic analysis, and ethical security testing without impacting production networks.
-* **Environment Specs:** Configured Oracle VirtualBox to host Kali Linux integrated with custom dual virtual network adapters (NAT and Host-Only modes).
-* **Lab Capabilities:** Enables packet capturing, vulnerability assessments, network discovery, and safe exploitation exercises within a strictly controlled virtual perimeter.
+The lab environment is built using Oracle VirtualBox and consists of virtual machine nodes configured across local and internal networks:
 
----
-
-## Network Architecture & Configuration
-
-* **Hypervisor:** Oracle VirtualBox
-* **Guest OS:** Kali Linux
-* **Network Adapters:**
-  * **Adapter 1 (NAT):** Provides outbound internet access for tool/package updates.
-  * **Adapter 2 (Host-Only):** Establishes an isolated internal network segment between host and guest environments.
+- **Windows 10 / Main Host OS**: Acts as the target host / workstation environment.
+- **Kali Linux**: Acts as the security auditing and penetration testing platform.
+- **VirtualBox Network Adapters**: NAT / Internal Network configuration to simulate real-world subnet isolation and communication.
 
 ---
 
-## Repository File Structure
+## 📸 Setup Screenshots & Visual Guide
 
-* `1-screenshot-network-settings.png` — VirtualBox network interface configuration (NAT & Host-Only setups).
-* `2-screenshot-kali-linux.png` — Operational Kali Linux desktop environment inside the hypervisor.
-* `3-screenshot-kali-network-settings.png` — Active IP addressing and routing verification inside Kali terminal.
-* `README.md` — Project overview and setup documentation.
-*
+Here is a breakdown of the key screenshot references included in this project:
+
+1. **`1-Screenshot-title-image.png`**: Main architecture diagram showing the overall VirtualBox lab structure, subnets, and host-guest topology.
+2. **`2-screenshot-network-settings-1.png`**: Interface overview of the VirtualBox Manager highlighting virtual network adapter configurations.
+3. **`3-screenshot-kali-linux.png`**: Active Kali Linux desktop environment window running inside the virtualization setup.
+4. **`4-screenshot-kali-network-settings.png`**: Network configuration interface inside Kali Linux showing static/custom IP address assignment and subnet settings.
+
+---
+
+## ⚙️ Configuration Steps
+
+1. **Virtual Machine Creation**: Provision Windows 10 and Kali Linux instances in VirtualBox.
+2. **Network Interface Setup**: Configure proper network adapters (NAT / Internal Network / Host-Only) per VM.
+3. **IP Configuration**: Assign and verify internal IP address bindings in Kali Linux to establish target communication.
